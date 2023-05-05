@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+
+    color: white;
+    font-size: 10px;
+}
+
+.app{
+    background-color: #181419;
+    padding: 1rem;
+    width: 30rem;
+    margin: auto;
+    height: 100%;
+}
+.app h2{
+    text-align: center;
+    color: #9e0b41;
+    font-size: 3.4rem;
+}
+.app .add-task {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    margin: 0.6rem 0;
+    justify-content: space-between;
+}
+.app .add-task input{
+    background-color: #181419;
+    border: 1px solid #9e0b41;
+    padding: 1rem;
+    border-radius: 10rem;
+    width: 70%;
+    
+}
+.app .add-task button{
+    width: 20%;
+    background-color: #181419;
+    border: #9e0b41 solid 1px;
+    border-radius: 5rem;
+    transition: 300ms;
+}
+.app .add-task button:hover{
+    transition: 300ms;
+    background-color: #9e0b41;
+}

@@ -4,20 +4,37 @@
 
     font-family: 'Roboto', sans-serif;
 
-    color: white;
+    color: var(--principal-color);
     font-size: 10px;
+
+    /* VARIAVEIS */
+
+    --light: #e6e0c5;
+    --light-2: #ebc4a9;
+    
+    --dark: #825e65;
+    --dark-2: #3e3742;
+
+    --principal-color: #cc8383;
+
+    
+}
+body{
+    overflow-y: hidden;
+    background-color: var(--dark);
 }
 
+/* ==== APP ==== */
 .app{
-    background-color: #181419;
+    background-color: var(--dark-2);
     padding: 1rem;
     width: 30rem;
     margin: auto;
-    height: 100%;
+    height: 100vh;
 }
 .app h2{
     text-align: center;
-    color: #9e0b41;
+    color: var(--principal-color);
     font-size: 3.4rem;
 }
 .app .add-task {
@@ -28,21 +45,70 @@
     justify-content: space-between;
 }
 .app .add-task input{
-    background-color: #181419;
-    border: 1px solid #9e0b41;
+    background-color: var(--dark-2);
+    border: 1px solid var(--principal-color);
     padding: 1rem;
     border-radius: 10rem;
     width: 70%;
-    
+    outline: none;
+}
+.app .add-task input::placeholder{
+    color: var(--principal-color);
 }
 .app .add-task button{
     width: 20%;
-    background-color: #181419;
-    border: #9e0b41 solid 1px;
+    background-color: var(--dark-2);
+    border: var(--principal-color) solid 1px;
     border-radius: 5rem;
     transition: 300ms;
 }
 .app .add-task button:hover{
     transition: 300ms;
-    background-color: #9e0b41;
+    background-color: var(--principal-color);
+    color: var(--dark-2);
+}
+
+.app .map{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: var(--dark) solid 3px;
+}
+
+/* ==== TASK ==== */
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--dark-2);
+    padding: 0.3rem;
+    border-radius: 1rem;
+    
+}
+.task p{
+    font-size: 1.6rem;
+    color: var(--principal-color);
+}
+.task .icons .icon{
+    padding: 0.2rem;
+    border-radius: 50px;
+    transition: 300ms;
+}
+.task .icons .icon:hover{
+    transition: 300ms;
+    background-color: var(--principal-color);
+    color: var(--light) !important;
+}
+.task .icons .icon:hover svg{
+    color: var(--light);
+}
+.task .icons .complete{
+    visibility: visible;
+}
+.task .icons .uncomplete{
+    visibility: hidden;
 }
